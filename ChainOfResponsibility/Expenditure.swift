@@ -7,6 +7,7 @@ import Foundation
 
 class Expenditure {
     init(amount: Int) {
+        self.amount = amount
     }
 
     private var _amount = Int()

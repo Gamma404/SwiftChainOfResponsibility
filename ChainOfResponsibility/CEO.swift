@@ -5,8 +5,7 @@
 
 import Foundation
 
-class Employee: Chain {
-
+class CEO : Chain {
 
     private var _nextManagementLevel: Chain?
     var nextManagementLevel: Chain {
@@ -20,12 +19,10 @@ class Employee: Chain {
     }
 
     func shouldApproveExpenditure(expenditure: Expenditure) {
-        if expenditure.amount > 0 && expenditure.amount < 100 {
-            print("Employee can approve this expenditure")
+        if expenditure.amount > 1000 && expenditure.amount < 10000 {
+            print("CEO can approve this expenditure")
         } else {
-            if _nextManagementLevel != nil {
-                nextManagementLevel.shouldApproveExpenditure(expenditure: expenditure)
-            }
+            print("No Support")
         }
     }
 }
